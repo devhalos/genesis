@@ -1,0 +1,48 @@
+name: genesis
+
+services:
+  auth_db:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data
+    networks:
+      - genesis
+    environment:
+      POSTGRES_DB: auth
+      POSTGRES_USER: auth_db_admin
+      POSTGRES_PASSWORD: auth_db_admin
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "auth", "-U", "auth_db_admin"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  auth:
+    image: quay.io/keycloak/keycloak
+    ports:
+      - 8081:8080
+      - 9000:9000
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: auth_admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: auth_admin
+      KC_DB: postgres
+      KC_DB_URL_HOST: auth_db
+      KC_DB_URL_DATABASE: auth
+      KC_DB_USERNAME: auth_db_admin
+      KC_DB_PASSWORD: auth_db_admin
+    depends_on:
+      auth_db:
+        condition: service_healthy
+    networks:
+      - genesis
+    command: start-dev
+
+networks:
+  genesis:
+
+volumes:
+  auth_db_data:
+    driver: local

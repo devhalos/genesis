@@ -3,3 +3,6 @@ terraform.tfstate*
 *.tfplan
 .terraform
 !.terraform.lock.hcl
+
+
+node_modules

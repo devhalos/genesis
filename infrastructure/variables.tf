@@ -17,7 +17,12 @@ variable "keycloak_url" {
 
 variable "genesis_app" {
   type = object({
-    valid_redirect_uris = list(string)
+    messaging = object({
+      web_app = object({
+        valid_redirect_uris = list(string)
+        web_origins         = list(string)
+      })
+    })
   })
   description = "The configuration of genesis app"
 }

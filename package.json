@@ -10,5 +10,9 @@
     "./packages/*"
   ],
   "author": "Jayson Ojeda",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.37.0",
+    "prettier": "^3.6.2"
+  }
 }

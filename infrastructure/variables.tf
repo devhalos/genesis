@@ -1,7 +1,7 @@
 variable "keycloak_client_id" {
   type        = string
   description = "The client id of the service account used by the keycloak terraform provider"
-  default     = "genesis_infrastructure"
+  default     = "genesis-infrastructure"
 }
 
 variable "keycloak_client_secret" {

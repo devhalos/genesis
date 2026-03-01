@@ -17,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.1",
@@ -25,9 +25,9 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.26",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "nx": "22.4.4",
+    "lint-staged": "^16.3.1",
+    "nx": "^22.5.3",
     "prettier": "^3.8.1",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.56.1"
   }
 }

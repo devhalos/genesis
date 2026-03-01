@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "lint-staged": "npx lint-staged --relative"
+    "lint-staged": "npx lint-staged --relative",
+    "infra:lint": "npm run infra:format && npm run infra:validate",
+    "infra:format": "cd infrastructure && echo 'start format check'; terraform fmt -check",
+    "infra:validate": "cd infrastructure && echo 'start validate'; terraform validate"
   },
   "workspaces": [
     "./packages/*"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+./scripts/check-branch-updated.sh
+./scripts/check-branch-name-format.sh
+
+npx nx affected -t build

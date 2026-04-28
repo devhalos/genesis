@@ -1,9 +1,18 @@
 resource "keycloak_realm" "genesis" {
-  realm                    = "genesis"
-  display_name             = "Genesis"
-  registration_allowed     = true
-  reset_password_allowed   = true
-  login_with_email_allowed = true
+  realm                          = "genesis"
+  display_name                   = "Genesis"
+  registration_allowed           = true
+  reset_password_allowed         = true
+  login_with_email_allowed       = true
+  registration_email_as_username = true
+  verify_email                   = true
+  remember_me                    = true
+
+  smtp_server {
+    host = var.keycloak_smtp.host
+    port = var.keycloak_smtp.port
+    from = var.keycloak_smtp.from
+  }
 }
 
 resource "keycloak_openid_client" "genesis_messaging_web_app" {

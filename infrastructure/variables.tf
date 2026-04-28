@@ -1,18 +1,36 @@
 variable "keycloak_client_id" {
   type        = string
   description = "The client id of the service account used by the keycloak terraform provider"
-  default     = "genesis-infrastructure"
 }
 
-variable "keycloak_client_secret" {
+variable "keycloak_admin_username" {
   type        = string
-  description = "The client secret of the service account used by the keycloak terraform provider"
+  description = "The username of the keycloak admin"
+}
+
+variable "keycloak_admin_password" {
+  type        = string
+  description = "The password of the keycloak admin"
 }
 
 variable "keycloak_url" {
   type        = string
   description = "The url of the keycloak server"
   default     = "http://localhost:8081"
+}
+
+variable "keycloak_smtp" {
+  type = object({
+    host = string
+    port = number
+    from = string
+  })
+  description = "The keycloak smtp config"
+  default = {
+    host = "auth_mail"
+    port = 1025
+    from = "admin.genesis@devhalos.com"
+  }
 }
 
 variable "genesis_app" {

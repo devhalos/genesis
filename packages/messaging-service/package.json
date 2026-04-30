@@ -1,0 +1,19 @@
+{
+  "name": "messaging-service",
+  "version": "1.0.0",
+  "description": "Messaging Service",
+  "main": "index.js",
+  "scripts": {
+    "mvn": "./mvnw",
+    "dev": "./mvnw spring-boot:run",
+    "test": "./mvnw test"
+  },
+  "keywords": [
+    "messaging",
+    "api",
+    "java"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -19,7 +19,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <div>
       <pre>{JSON.stringify(user, null, 2)}</pre>
       <button
         onClick={() =>
@@ -30,6 +30,6 @@ export default function App() {
       >
         Log out
       </button>
-    </>
+    </div>
   );
 }

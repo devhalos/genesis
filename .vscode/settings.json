@@ -2,5 +2,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "java.configuration.updateBuildConfiguration": "interactive"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": "eclipse-formatter.xml",
+  "java.checkstyle.version": "13.4.2",
+  "java.checkstyle.configuration": "${workspaceFolder}/packages/messaging-service/checkstyle.xml"
 }

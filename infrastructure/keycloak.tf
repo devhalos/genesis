@@ -26,3 +26,25 @@ resource "keycloak_openid_client" "genesis_messaging_web_app" {
   web_origins           = var.genesis_app.messaging.web_app.web_origins
 }
 
+resource "keycloak_openid_client" "genesis_messaging_service" {
+  realm_id                     = keycloak_realm.genesis.id
+  client_id                    = "genesis-messaging-service"
+  name                         = "Genesis Messaging Service"
+  description                  = "Client to access keycloak data from genesis messaging service"
+  access_type                  = "CONFIDENTIAL"
+  standard_flow_enabled        = false
+  direct_access_grants_enabled = false
+  service_accounts_enabled     = true
+}
+
+data "keycloak_openid_client" "realm_management_client" {
+  realm_id  = keycloak_realm.genesis.id
+  client_id = "realm-management"
+}
+
+resource "keycloak_openid_client_service_account_role" "service_account_role_assignment" {
+  realm_id                = keycloak_realm.genesis.id
+  service_account_user_id = keycloak_openid_client.genesis_messaging_service.service_account_user_id
+  client_id               = data.keycloak_openid_client.realm_management_client.id
+  role                    = "view-users"
+}

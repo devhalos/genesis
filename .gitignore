@@ -14,3 +14,5 @@ node_modules
 .github/instructions/nx.instructions.md
 
 .DS_Store
+
+target

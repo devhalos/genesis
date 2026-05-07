@@ -4,9 +4,12 @@
   "description": "Messaging Service",
   "main": "index.js",
   "scripts": {
-    "mvn": "./mvnw",
-    "dev": "./mvnw spring-boot:run",
-    "test": "./mvnw test"
+    "mvn": "../../mvnw",
+    "dev": "npm run mvn -- spring-boot:run",
+    "build": "npm run mvn -- install",
+    "test": "npm run mvn -- test",
+    "lint": "npm run mvn -- spotless:check -o",
+    "lint:fix": "npm run mvn -- spotless:apply -o"
   },
   "keywords": [
     "messaging",

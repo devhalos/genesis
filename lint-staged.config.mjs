@@ -7,12 +7,10 @@ export default {
   "*.java": (files) => {
     console.info("files", files);
 
-    const projs = execSync("npx nx show projects")
+    const projects = execSync("npx nx show projects")
       .toString()
       .trim()
-      .split("\n");
-
-    const projects = projs
+      .split("\n")
       .filter((project) =>
         files.some((file) => file.startsWith(`packages/${project}`)),
       )
@@ -21,7 +19,7 @@ export default {
     console.info("projects", projects);
 
     if (projects.length) {
-      return `npm run mvn -- -pl ${projects.join(",")} validate`;
+      return `npm run mvn -- -pl ${projects.join(",")} spotless:apply`;
     }
 
     return "";

@@ -13,6 +13,6 @@ public class ConversationController {
     @GetMapping("search")
     public List<ConversationDTO.SearchResult> searchConversations(@RequestParam String searchText) {
 
-        return List.of(new ConversationDTO.SearchResult());
+        return List.of(new ConversationDTO.SearchResult(), new ConversationDTO.SearchResult());
     }
 }

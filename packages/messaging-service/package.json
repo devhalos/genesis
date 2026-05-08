@@ -8,8 +8,9 @@
     "dev": "npm run mvn -- spring-boot:run",
     "build": "npm run mvn -- install",
     "test": "npm run mvn -- test",
-    "lint": "npm run mvn -- spotless:check -o",
-    "lint:fix": "npm run mvn -- spotless:apply -o"
+    "lint": "npm run mvn -- spotless:check",
+    "lint:fix": "npm run mvn -- spotless:apply",
+    "lint:coding": "npm run mvn -- checkstyle:checkstyle"
   },
   "keywords": [
     "messaging",

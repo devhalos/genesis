@@ -1,6 +1,9 @@
 package com.devhalos.genesis.messaging_service.conversation;
 
-public class ConversationDTO {
+import java.util.List;
 
-    public record SearchResult() {}
+public class ConversationDTO {
+    public record User(String email, String firstName, String lastName, String profilePic) {}
+
+    public record SearchResult(List<User> user) {}
 }

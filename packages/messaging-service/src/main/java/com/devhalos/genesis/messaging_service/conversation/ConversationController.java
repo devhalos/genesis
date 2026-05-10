@@ -12,7 +12,9 @@ public class ConversationController {
 
     @GetMapping("search")
     public List<ConversationDTO.SearchResult> searchConversations(@RequestParam String searchText) {
-
-        return List.of(new ConversationDTO.SearchResult());
+        return List.of(new ConversationDTO.SearchResult(List.of(
+                new ConversationDTO.User("", "", "", ""),
+                new ConversationDTO.User("", "", "", ""),
+                new ConversationDTO.User("", "", "", ""))));
     }
 }

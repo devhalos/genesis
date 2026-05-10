@@ -57,10 +57,15 @@
 				<version>${spotless.version}</version>
 				<configuration>
 					<java>
-						<googleJavaFormat>
-							<style>AOSP</style>
-							<reflowLongStrings>true</reflowLongStrings>
-						</googleJavaFormat>
+<!--						<googleJavaFormat>-->
+<!--&lt;!&ndash;							<style>AOSP</style>&ndash;&gt;-->
+<!--							<reflowLongStrings>true</reflowLongStrings>-->
+<!--						</googleJavaFormat>-->
+						<palantirJavaFormat />
+<!--						<indent>-->
+<!--							<tabs>true</tabs>-->
+<!--							<spacesPerTab>2</spacesPerTab>-->
+<!--						</indent>-->
 						<indent>
 							<spaces>true</spaces>
 							<spacesPerTab>4</spacesPerTab>

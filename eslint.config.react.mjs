@@ -8,7 +8,7 @@ export default defineConfig([
   {
     files: config.files,
     extends: [
-      reactHooks.configs["recommended-latest"],
+      reactHooks.configs.flat["recommended-latest"],
       reactRefresh.configs.vite,
     ],
   },

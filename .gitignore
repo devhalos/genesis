@@ -16,4 +16,4 @@ node_modules
 target
 
 .idea
-base.iml
+*.iml

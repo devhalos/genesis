@@ -1,5 +1,5 @@
 {
-  "name": "messaging-service",
+  "name": "@devhalos/genesis-service",
   "version": "1.0.0",
   "description": "Messaging Service",
   "main": "index.js",

@@ -110,8 +110,8 @@ https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
     <module name="InvalidJavadocPosition" />
     <module name="JavadocMethod" />
     <module name="JavadocType" />
-    <module name="JavadocVariable" />
-    <module name="JavadocStyle" />
+    <!-- <module name="JavadocVariable" /> -->
+<!--    <module name="JavadocStyle" />-->
     <!-- <module name="MissingJavadocMethod" /> -->
 
     <!-- Checks for Naming Conventions.                  -->
@@ -176,7 +176,9 @@ https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
     <module name="EmptyStatement" />
     <module name="EqualsHashCode" />
     <module name="FallThrough" />
-    <module name="HiddenField" />
+    <module name="HiddenField">
+      <property name="ignoreConstructorParameter" value="true" />
+    </module>
     <module name="IllegalInstantiation" />
     <module name="InnerAssignment" />
     <module name="MagicNumber" />

@@ -1,10 +1,10 @@
-package com.devhalos.genesis.messaging_service;
+package com.devhalos.genesis_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MessagingServiceApplicationTests {
+class GenesisServiceApplicationTests {
 
     @Test
     void contextLoads() {}

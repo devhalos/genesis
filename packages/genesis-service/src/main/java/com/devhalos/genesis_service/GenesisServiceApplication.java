@@ -1,12 +1,12 @@
-package com.devhalos.genesis.messaging_service;
+package com.devhalos.genesis_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MessagingServiceApplication {
+public class GenesisServiceApplication {
 
     public static void main(final String[] args) {
-        SpringApplication.run(MessagingServiceApplication.class, args);
+        SpringApplication.run(GenesisServiceApplication.class, args);
     }
 }

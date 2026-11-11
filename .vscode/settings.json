@@ -6,5 +6,16 @@
   "java.compile.nullAnalysis.mode": "automatic",
   "java.format.settings.url": "eclipse-formatter.xml",
   "java.checkstyle.version": "13.4.2",
-  "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml"
+  "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        // Match all .json files except for ones in
+        // .vscode directory
+        "match": "\\.java$",
+        "notMatch": "\\.vscode/.*$",
+        "cmd": "npm run mvn -- -o spotless:apply -DspotlessFiles=${file}"
+      }
+    ]
+  }
 }

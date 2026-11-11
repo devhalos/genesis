@@ -21,8 +21,8 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react-swc": "^4.3.3",
-    "globals": "^16.5.0",
-    "typescript": "~5.8.3",
-    "vite": "^7.3.7"
+    "globals": "^17.14.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.8"
   }
 }
